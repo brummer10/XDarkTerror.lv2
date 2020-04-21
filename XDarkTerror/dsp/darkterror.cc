@@ -238,7 +238,7 @@ void Dsp::clear_state_f_static(Dsp *p)
 
 inline void Dsp::init(uint32_t RsamplingFreq)
 {
-	samplingFreq = 4 * RsamplingFreq;
+	samplingFreq = 192000;
 	smp.setup(RsamplingFreq, samplingFreq);
 	fSamplingFreq = samplingFreq;
 	fConst0 = std::min<double>(192000.0, std::max<double>(1.0, double(fSamplingFreq)));
